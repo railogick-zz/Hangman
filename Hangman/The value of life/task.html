@@ -1,0 +1,92 @@
+<h2 style="text-align: center;">Add the victory condition</h2>
+
+<p>The recent version of the game is not as fun until we don't handle the player's victory. A player wins when all the letters are guessed and there are still some tries left (except the player uses his last try and actually guesses the word, he's lucky then!).</p>
+
+<p>Notice that, in the previous stage, the user has only 8 attempts to guess letters. The number of attempts was decreasing despite the fact that the user guessed one of the hidden letters in the word! It needs to be changed - now the number of attempts should decrease only if there are no letters to uncover. And yes, if the word to guess is <code>-a-a</code> at the moment and the user printed <code>a</code> you should count this as a fail and reduce the number of attempts by 1 (later we'll fix it in favor of the user).</p>
+
+<p>Print <code>No such letter in the word</code> if the word guessed by the program doesn't contain this letter.</p>
+
+<p>Print <code>No improvements</code> if the guessed word contains this letter but the user tried this letter before.</p>
+
+<p><strong>Attention!</strong>  Please, make sure that your program's output formatting precisely follows the example output formatting. Pay attention to the empty lines between tries and in the end.</p>
+
+<h2 style="text-align: center;">Input and output example</h2>
+
+<pre><code class="language-no-highlight">H A N G M A N
+
+------
+Input a letter: t
+
+--t---
+Input a letter: z
+No such letter in the word
+
+--t---
+Input a letter: t
+No improvements
+
+--t---
+Input a letter: t
+No improvements
+
+--t---
+Input a letter: y
+
+-yt---
+Input a letter: x
+No such letter in the word
+
+-yt---
+Input a letter: y
+No improvements
+
+-yt---
+Input a letter: p
+
+pyt---
+Input a letter: p
+No improvements
+
+pyt---
+Input a letter: q
+No such letter in the word
+
+pyt---
+Input a letter: p
+No improvements
+You are hanged!</code></pre>
+
+<pre><code class="language-no-highlight">H A N G M A N
+
+----
+Input a letter: j
+
+j---
+Input a letter: i
+No such letter in the word
+
+j---
+Input a letter: g
+No such letter in the word
+
+j---
+Input a letter: g
+No such letter in the word
+
+j---
+Input a letter: g
+No such letter in the word
+
+j---
+Input a letter: g
+No such letter in the word
+
+j---
+Input a letter: a
+
+ja-a
+Input a letter: v
+
+java
+You guessed the word!
+You survived!</code></pre>
